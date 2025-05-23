@@ -16,7 +16,7 @@
 
 ### Enrollment Interface
 ![Enrollment Screen](./assets/enrollment.png)
-![Enrollment Screen](./assets/enrollment1.png)
+![Enrollment Screen](./assets/enrollment2.png)
 
 ### Dashboard Interface
 ![Dashboard Screen](./assets/dashboard.png)
