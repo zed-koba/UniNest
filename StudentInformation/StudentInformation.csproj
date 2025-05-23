@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70CF30D9-D45C-4F03-9EAB-990D1D502A7F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudentInformation</RootNamespace>
+    <AssemblyName>StudentInformation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\AddAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\AddAttendance.Designer.cs">
+      <DependentUpon>AddAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\Address.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\Address.Designer.cs">
+      <DependentUpon>Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\Attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\EditAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\EditAddress.Designer.cs">
+      <DependentUpon>EditAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\EditAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\EditAttendance.Designer.cs">
+      <DependentUpon>EditAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\EditEducation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\EditEducation.Designer.cs">
+      <DependentUpon>EditEducation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\EditEnrollMent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\EditEnrollMent.Designer.cs">
+      <DependentUpon>EditEnrollMent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\EditEnrollMentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\EditEnrollMentDetails.Designer.cs">
+      <DependentUpon>EditEnrollMentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\EditGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\EditGrades.Designer.cs">
+      <DependentUpon>EditGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\EditParents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\EditParents.Designer.cs">
+      <DependentUpon>EditParents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\EditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\EditStudent.Designer.cs">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\Education.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\Education.Designer.cs">
+      <DependentUpon>Education.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\Grades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\Grades.Designer.cs">
+      <DependentUpon>Grades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\GradeRange.cs" />
+    <Compile Include="AdminInterface\Parents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\Parents.Designer.cs">
+      <DependentUpon>Parents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\Students.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\StudentsEnrollmentDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\StudentsEnrollmentDetails.Designer.cs">
+      <DependentUpon>StudentsEnrollmentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollMainPage.Designer.cs">
+      <DependentUpon>EnrollMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\Address.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\Address.Designer.cs">
+      <DependentUpon>Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\Agreement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\Agreement.Designer.cs">
+      <DependentUpon>Agreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\Documents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\Documents.Designer.cs">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\Education.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\Education.Designer.cs">
+      <DependentUpon>Education.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\EnrollmentDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\EnrollmentDetails.Designer.cs">
+      <DependentUpon>EnrollmentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\OfficiallyEnrolled.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\OfficiallyEnrolled.Designer.cs">
+      <DependentUpon>OfficiallyEnrolled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\ParentInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\ParentInformation.Designer.cs">
+      <DependentUpon>ParentInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\PreviousSchool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\PreviousSchool.Designer.cs">
+      <DependentUpon>PreviousSchool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\StatusInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\StatusInformation.Designer.cs">
+      <DependentUpon>StatusInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\StudentDetails.cs" />
+    <Compile Include="EnrollUserControls\College\StudentEnrollmentInfo.cs" />
+    <Compile Include="EnrollUserControls\College\StudentParents.cs" />
+    <Compile Include="EnrollUserControls\College\StudentsEducation.cs" />
+    <Compile Include="EnrollUserControls\EnrollmentLanding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\EnrollmentLanding.Designer.cs">
+      <DependentUpon>EnrollmentLanding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\PersonalDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollUserControls\College\PersonalDetails.Designer.cs">
+      <DependentUpon>PersonalDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalForms\CustomDecisionPopWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalForms\CustomDecisionPopWindow.Designer.cs">
+      <DependentUpon>CustomDecisionPopWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalForms\CustomLogoutPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalForms\CustomLogoutPopup.Designer.cs">
+      <DependentUpon>CustomLogoutPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalForms\CustomYesNoPopWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalForms\CustomYesNoPopWindow.Designer.cs">
+      <DependentUpon>CustomYesNoPopWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalMethod.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDashboard.Designer.cs">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInterface\Attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentInterface\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalForms\CustomPopWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalForms\CustomPopWindow.Designer.cs">
+      <DependentUpon>CustomPopWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInterface\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentInterface\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInterface\Grades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentInterface\Grades.Designer.cs">
+      <DependentUpon>Grades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInterface\GradesPerSem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentInterface\GradesPerSem.Designer.cs">
+      <DependentUpon>GradesPerSem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInterface\MajorExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentInterface\MajorExam.Designer.cs">
+      <DependentUpon>MajorExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInterface\MajorExamScores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentInterface\MajorExamScores.Designer.cs">
+      <DependentUpon>MajorExamScores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInterface\Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentInterface\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInterface\Student_Attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminInterface\Student_Attendance.Designer.cs">
+      <DependentUpon>Student_Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInterface\Subjects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentInterface\Subjects.Designer.cs">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\AddAttendance.resx">
+      <DependentUpon>AddAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\Address.resx">
+      <DependentUpon>Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\EditAddress.resx">
+      <DependentUpon>EditAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\EditAttendance.resx">
+      <DependentUpon>EditAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\EditEducation.resx">
+      <DependentUpon>EditEducation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\EditEnrollMent.resx">
+      <DependentUpon>EditEnrollMent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\EditEnrollMentDetails.resx">
+      <DependentUpon>EditEnrollMentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\EditGrades.resx">
+      <DependentUpon>EditGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\EditParents.resx">
+      <DependentUpon>EditParents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\EditStudent.resx">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\Education.resx">
+      <DependentUpon>Education.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\Grades.resx">
+      <DependentUpon>Grades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\Parents.resx">
+      <DependentUpon>Parents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\StudentsEnrollmentDetails.resx">
+      <DependentUpon>StudentsEnrollmentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollMainPage.resx">
+      <DependentUpon>EnrollMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\Address.resx">
+      <DependentUpon>Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\Agreement.resx">
+      <DependentUpon>Agreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\Documents.resx">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\Education.resx">
+      <DependentUpon>Education.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\EnrollmentDetails.resx">
+      <DependentUpon>EnrollmentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\OfficiallyEnrolled.resx">
+      <DependentUpon>OfficiallyEnrolled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\ParentInformation.resx">
+      <DependentUpon>ParentInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\PreviousSchool.resx">
+      <DependentUpon>PreviousSchool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\StatusInformation.resx">
+      <DependentUpon>StatusInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\EnrollmentLanding.resx">
+      <DependentUpon>EnrollmentLanding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollUserControls\College\PersonalDetails.resx">
+      <DependentUpon>PersonalDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalForms\CustomDecisionPopWindow.resx">
+      <DependentUpon>CustomDecisionPopWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalForms\CustomLogoutPopup.resx">
+      <DependentUpon>CustomLogoutPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalForms\CustomYesNoPopWindow.resx">
+      <DependentUpon>CustomYesNoPopWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StudentDashboard.resx">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInterface\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalForms\CustomPopWindow.resx">
+      <DependentUpon>CustomPopWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInterface\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInterface\Grades.resx">
+      <DependentUpon>Grades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInterface\GradesPerSem.resx">
+      <DependentUpon>GradesPerSem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInterface\MajorExam.resx">
+      <DependentUpon>MajorExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInterface\MajorExamScores.resx">
+      <DependentUpon>MajorExamScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInterface\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInterface\Student_Attendance.resx">
+      <DependentUpon>Student_Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInterface\Subjects.resx">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-shelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi--college-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi--college-outline %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formkit--arrowleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabler--check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bi--send-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-student.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabler--home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stash--graduation-cap-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\streamline--graduation-cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabler--home-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stash--burger-classic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stash--burger-classic-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bx--dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic--baseline-laptop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lsicon--down-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tdesign--book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoir--medal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoir--medal %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols--logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi--bell-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flowbite--window-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols--trophy-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basil--book-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\majesticons--creditcard-hand-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hugeicons--school-report-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hugeicons--school-report-card %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\si--arrow-right-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\si--arrow-right-line %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\si--arrow-right-line %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\si--arrow-left-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\streamline--graduation-cap-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prime--home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prime--home-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\Dashboard-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lsicon--down-filled2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clarity--note-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lsicon--arrow-left-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lsicon--arrow-left-filled %2824%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lsicon--arrow-left-filled %2816%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols--close %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-park--check-one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-error-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols--search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixeltrue-welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unseen-studio-s9CC2SKySJM-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geronimo-giqueaux-pTwTK0BBFPQ-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi--bank-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mingcute--department-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mingcute--department-line %2864%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mynaui--trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mynaui--trash-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wired-lineal-35-edit-hover-line.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warning-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols--close %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi--plus-circle-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\AdminDashboard-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\Students-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\EnrollmentDetails-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\StudentGrade-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\Attendance-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\basil--logout-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\basil--logout-solid %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\Attendance-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\basil--logout-solid %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eva--question-mark-circle-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

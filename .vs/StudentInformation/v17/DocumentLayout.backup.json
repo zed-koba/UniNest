@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cedri\\source\\repos\\StudentInformation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF30D9-D45C-4F03-9EAB-990D1D502A7F}|StudentInformation\\StudentInformation.csproj|c:\\users\\cedri\\source\\repos\\studentinformation\\studentinformation\\enrollusercontrols\\college\\personaldetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70CF30D9-D45C-4F03-9EAB-990D1D502A7F}|StudentInformation\\StudentInformation.csproj|solutionrelative:studentinformation\\enrollusercontrols\\college\\personaldetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF30D9-D45C-4F03-9EAB-990D1D502A7F}|StudentInformation\\StudentInformation.csproj|C:\\Users\\cedri\\source\\repos\\StudentInformation\\studentinformation\\enrollusercontrols\\college\\personaldetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF30D9-D45C-4F03-9EAB-990D1D502A7F}|StudentInformation\\StudentInformation.csproj|solutionrelative:studentinformation\\enrollusercontrols\\college\\personaldetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonalDetails.cs",
+              "DocumentMoniker": "C:\\Users\\cedri\\source\\repos\\StudentInformation\\StudentInformation\\EnrollUserControls\\College\\PersonalDetails.cs",
+              "RelativeDocumentMoniker": "StudentInformation\\EnrollUserControls\\College\\PersonalDetails.cs",
+              "ToolTip": "C:\\Users\\cedri\\source\\repos\\StudentInformation\\StudentInformation\\EnrollUserControls\\College\\PersonalDetails.cs",
+              "RelativeToolTip": "StudentInformation\\EnrollUserControls\\College\\PersonalDetails.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswFgAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:11:06.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonalDetails.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\cedri\\source\\repos\\StudentInformation\\StudentInformation\\EnrollUserControls\\College\\PersonalDetails.cs",
+              "RelativeDocumentMoniker": "StudentInformation\\EnrollUserControls\\College\\PersonalDetails.cs",
+              "ToolTip": "C:\\Users\\cedri\\source\\repos\\StudentInformation\\StudentInformation\\EnrollUserControls\\College\\PersonalDetails.cs [Design]",
+              "RelativeToolTip": "StudentInformation\\EnrollUserControls\\College\\PersonalDetails.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:10:57.15Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
